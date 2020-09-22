@@ -1,6 +1,6 @@
 .js-weather {
     top: 10px;
-    right: 60px;
+    right: 15px;
     font-size: 1em;
 }
 
@@ -31,4 +31,9 @@
     background: none;
     border: none;
 }
+
+.bgImage {
+    background-image: url(https://source.unsplash.com/category/nature/720x480);
+}
+
 
