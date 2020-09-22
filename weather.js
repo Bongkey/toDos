@@ -1,15 +1,30 @@
 const weather = document.querySelector(".js-weather");
-const API_KEY = "4af1756409b32d51a1776f05d39e589e";
+const WEATHER_API_KEY = "4af1756409b32d51a1776f05d39e589e";
+const LOCATION_API_KEY = "AIzaSyDIYsQuPSKXrfeuX4KQQtfGddllpJHLRYc";
 const COORDS = 'coords';
 
+function getLocation(lat,lon){
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=${LOCATION_API_KEY}`
+    ).then(function(response){
+        return response.json();
+    }).then(function(json){
+        const raw = json.plus_code.compound_code;
+        const location_arr = raw.split(' ');
+        location_arr.shift();
+        location_arr.shift();
+        const location = location_arr.join();
+        weather.innerText = `${location}`;
+    });
+}
+
 function getWeather(lat ,lon) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
     ).then(function(response){
         return response.json();
     }).then(function(json){
         const temperature = json.main.temp;
         const place = json.name;
-        weather.innerText = `${temperature}°C \n${place}`;
+        weather.innerText += `\n${temperature}°C`;
     });
 }
 
@@ -25,6 +40,7 @@ function handleGeoSuccess(position) {
         longitude
     };
     saveCoords(coordsObj);
+    getLocation(latitude,longitude);
     getWeather(latitude,longitude);
 }
 
@@ -43,6 +59,7 @@ function loadCoords() {
     } else {
         const parseCoords = JSON.parse(loadedCoords);
         getWeather(parseCoords.latitude,parseCoords.longitude);
+        getLocation(parseCoords.latitude,parseCoords.longitude);
     }
 }
 

@@ -8,8 +8,10 @@ body {
 .js-weather {
     position: absolute;
     top: 20px;
-    right: 30px;
+    right: 20px;
     font-size: 2em;
+    text-align: end;
+    line-height: 1.2;
 }
 
 .center {
