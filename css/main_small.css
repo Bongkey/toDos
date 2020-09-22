@@ -1,0 +1,34 @@
+.js-weather {
+    top: 10px;
+    right: 60px;
+    font-size: 1em;
+}
+
+.clock {
+    font-size: 3em;
+}
+
+.nameForm,
+.greetings {
+    font-size: 1.5em;
+}
+
+.nameForm>input,
+.toDoForm>input {
+    font-size: 16px;
+}
+
+.toDoList {
+    padding: 20px;
+}
+
+.toDoList li {
+    font-size: 20px;
+}
+
+.toDoList li button {
+    font-size: 18px;
+    background: none;
+    border: none;
+}
+
