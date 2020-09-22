@@ -58,8 +58,8 @@ function loadCoords() {
         askForCoords();
     } else {
         const parseCoords = JSON.parse(loadedCoords);
-        getWeather(parseCoords.latitude,parseCoords.longitude);
         getLocation(parseCoords.latitude,parseCoords.longitude);
+        getWeather(parseCoords.latitude,parseCoords.longitude);
     }
 }
 
