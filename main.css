@@ -1,30 +1,104 @@
 body {
+    margin: 0;
+    padding: 0;
     background: #2c3e50;
+    color: #FFF;
 }
 
-.form,
+.js-weather {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+}
+
+.center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.clock {
+    font-size: 10em;
+}
+
+.nameForm,
 .greetings {
     display: none;
+    font-size: 3em;
 }
+
+.greetings {
+    margin-bottom: 20px;
+}
+
+.nameForm>input,
+.toDoForm>input {
+    outline-style: none;
+    /* 포커스시 발생하는 효과 제거를 원한다면 */
+    -webkit-appearance: none;
+    /* 브라우저별 기본 스타일링 제거 */
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    font-size: 32px;
+}
+
+input::-webkit-input-placeholder {
+    color: #fff;
+    font-style: italic;
+    text-align: center;
+}
+
+input:-ms-input-placeholder {
+    color: fff;
+    font-style: italic;
+    text-align: center;
+}
+
+.toDoList {
+    padding: 30px;
+}
+
+.toDoList li {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.toDoList li button {
+    font-size: 26px;
+    background: none;
+    border: none;
+}
+
 
 .showing {
     display: block;
 }
 
+
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
+
 .bgImage {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
     animation: fadeIn 0.5s linear;
+    filter: brightness(70%);
 }
