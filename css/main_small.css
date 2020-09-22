@@ -1,14 +1,16 @@
 .js-weather {
     top: 10px;
     right: 15px;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .clock {
     font-size: 3em;
     margin-bottom: 10px;
 }
-
+.nameForm {
+    margin-bottom: 10px;
+}
 .nameForm,
 .greetings {
     font-size: 1.5em;
