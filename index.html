@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>toDos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" media="(max-width: 768px)" href="css/main_small.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      media="(max-width: 768px)"
+      href="css/main_small.css"
+    />
+  </head>
 
-<body>
+  <body>
     <span class="js-weather"></span>
     <div class="center">
-        <div class="js-clock clock">
-            <h1>00:00</h1>
-        </div>
-        <form class="js-nameForm nameForm">
-            <input type="text" placeholder="What is your name?" />
-        </form>
-        <h4 class="js-greetings greetings"></h4>
-        <form class="js-toDoForm toDoForm write-form">
-            <input type="text" id="writer" placeholder="Write a to do here" />
-        </form>
-        <div class="toDoList">
-            <h2>Pending</h2>
-            <ul class="pending"></ul>
-            <h2>Finished</h2>
-            <ul class="finished"></ul>
-            <img class="bgImage">
-        </div>
+      <div class="js-clock clock">
+        <h1>00:00</h1>
+      </div>
+      <form class="js-nameForm nameForm">
+        <input type="text" placeholder="What is your name?" />
+      </form>
+      <h4 class="js-greetings greetings"></h4>
+      <form class="js-toDoForm toDoForm write-form">
+        <input type="text" id="writer" placeholder="Write a to do here" />
+      </form>
+      <div class="toDoList">
+        <h2>Pending</h2>
+        <ul class="pending"></ul>
+        <h2>Finished</h2>
+        <ul class="finished"></ul>
+        <img class="bgImage" />
+      </div>
     </div>
     <script src="clock.js"></script>
     <script src="greetings.js"></script>
     <script src="todo.js"></script>
     <!-- <script src="bg.js"></script> -->
     <script src="weather.js"></script>
-</body>
-
+  </body>
 </html>

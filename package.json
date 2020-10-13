@@ -1,0 +1,25 @@
+{
+  "name": "toDos",
+  "version": "1.0.0",
+  "main": "bg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bongkey/toDos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bongkey/toDos/issues"
+  },
+  "homepage": "https://github.com/Bongkey/toDos#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.2"
+  }
+}
