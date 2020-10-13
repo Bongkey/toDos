@@ -13,7 +13,7 @@ function getLocation(lat,lon){
         location_arr.shift();
         location_arr.shift();
         const location = location_arr.join();
-        weather.innerText = `${location}`;
+        // weather.innerText = `${location}`;
     });
 }
 
@@ -24,7 +24,7 @@ function getWeather(lat ,lon) {
     }).then(function(json){
         const temperature = json.main.temp;
         const place = json.name;
-        weather.innerText += `\n${temperature}°C`;
+        weather.innerText += `${temperature}°C`;
     });
 }
 

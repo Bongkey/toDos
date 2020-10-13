@@ -5,6 +5,10 @@ body {
     color: #FFF;
 }
 
+h2 {
+    font-size: 32px;
+}
+
 .js-weather {
     position: absolute;
     top: 20px;
@@ -67,9 +71,13 @@ input:-ms-input-placeholder {
     padding: 30px;
 }
 
+.toDoList h2 {
+    margin-bottom: 20px;
+}
+
 .toDoList li {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .toDoList li button {
@@ -108,3 +116,6 @@ input:-ms-input-placeholder {
     filter: brightness(70%);
 }
 
+.toDoList {
+    margin-top: 20px;
+}

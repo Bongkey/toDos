@@ -8,9 +8,11 @@
     font-size: 3em;
     margin-bottom: 10px;
 }
+
 .nameForm {
     margin-bottom: 10px;
 }
+
 .nameForm,
 .greetings {
     font-size: 1.5em;
@@ -39,4 +41,6 @@
     background-image: url(https://source.unsplash.com/category/nature/720x480);
 }
 
-
+.toDoList {
+    margin-top: 20px;
+}
