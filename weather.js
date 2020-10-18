@@ -8,12 +8,14 @@ function getLocation(lat,lon){
     ).then(function(response){
         return response.json();
     }).then(function(json){
+        console.log(json);
         const raw = json.plus_code.compound_code;
         const location_arr = raw.split(' ');
         location_arr.shift();
         location_arr.shift();
         const location = location_arr.join();
-        // weather.innerText = `${location}`;
+        console.log(location);
+        weather.innerText = `${location}`;
     });
 }
 
@@ -24,7 +26,8 @@ function getWeather(lat ,lon) {
     }).then(function(json){
         const temperature = json.main.temp;
         const place = json.name;
-        weather.innerText += `${temperature}°C`;
+        weather.innerText = `${place}`;
+        weather.innerText += `\n${temperature}°C`;
     });
 }
 

@@ -11,7 +11,7 @@ h2 {
 
 .js-weather {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
     font-size: 2em;
     text-align: end;
